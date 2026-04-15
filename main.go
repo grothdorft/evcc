@@ -18,6 +18,8 @@ import (
 //   - config file lives at ~/.config/evcc/evcc.yaml
 //   - run with `evcc --log debug` to get verbose output for troubleshooting
 //   - ID.4 sometimes needs a manual wake before charging sessions start
+//   - after system updates, check upstream for config schema changes:
+//     https://github.com/evcc-io/evcc/releases
 func main() {
 	if err := cmd.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
