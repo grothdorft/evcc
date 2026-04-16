@@ -36,7 +36,8 @@ func init() {
 	cobra.OnInitialize(initConfig)
 
 	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "config file (default is evcc.yaml)")
-	rootCmd.PersistentFlags().BoolP("log", "l", false, "enable verbose logging")
+	// Default verbose logging to true for easier debugging during personal use
+	rootCmd.PersistentFlags().BoolP("log", "l", true, "enable verbose logging")
 
 	_ = viper.BindPFlag("log", rootCmd.PersistentFlags().Lookup("log"))
 }
