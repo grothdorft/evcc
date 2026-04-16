@@ -20,6 +20,7 @@ import (
 //   - ID.4 sometimes needs a manual wake before charging sessions start
 //   - after system updates, check upstream for config schema changes:
 //     https://github.com/evcc-io/evcc/releases
+//   - TODO: investigate evcc's Tibber integration for dynamic tariff-based charging
 func main() {
 	if err := cmd.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
