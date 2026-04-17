@@ -53,6 +53,8 @@ func initConfig() {
 		viper.AddConfigPath(".")
 		viper.AddConfigPath("$HOME")
 		viper.AddConfigPath("/etc/evcc")
+		// Also check ~/.config/evcc for XDG compliance
+		viper.AddConfigPath("$HOME/.config/evcc")
 	}
 
 	viper.AutomaticEnv()
