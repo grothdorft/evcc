@@ -64,6 +64,9 @@ func initConfig() {
 			fmt.Fprintln(os.Stderr, "error reading config:", err)
 			os.Exit(1)
 		}
+	} else {
+		// Print which config file is being used — helpful when debugging multiple installs
+		fmt.Fprintln(os.Stderr, "using config file:", viper.ConfigFileUsed())
 	}
 }
 
