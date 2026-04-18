@@ -65,8 +65,10 @@ func initConfig() {
 			os.Exit(1)
 		}
 	} else {
-		// Print which config file is being used — helpful when debugging multiple installs
-		fmt.Println("using config file:", viper.ConfigFileUsed())
+		// Only print config file path when verbose logging is enabled
+		if viper.GetBool("log") {
+			fmt.Println("using config file:", viper.ConfigFileUsed())
+		}
 	}
 }
 
