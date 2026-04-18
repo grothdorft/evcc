@@ -21,9 +21,7 @@ var versionCmd = &cobra.Command{
 	Short: "Print the version information",
 	Long:  `Print the version, commit hash, and build date of this evcc binary.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("evcc version %s\n", Version)
-		fmt.Printf("  commit: %s\n", Commit)
-		fmt.Printf("  built:  %s\n", Date)
+		fmt.Printf("evcc version %s (commit: %s, built: %s)\n", Version, Commit, Date)
 	},
 }
 
