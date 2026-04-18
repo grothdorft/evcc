@@ -66,7 +66,7 @@ func initConfig() {
 		}
 	} else {
 		// Print which config file is being used — helpful when debugging multiple installs
-		fmt.Fprintln(os.Stderr, "using config file:", viper.ConfigFileUsed())
+		fmt.Println("using config file:", viper.ConfigFileUsed())
 	}
 }
 
