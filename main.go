@@ -21,6 +21,7 @@ import (
 //   - after system updates, check upstream for config schema changes:
 //     https://github.com/evcc-io/evcc/releases
 //   - TODO: investigate evcc's Tibber integration for dynamic tariff-based charging
+//   - TODO: set up a cron job or systemd timer to auto-restart evcc after power outages
 func main() {
 	if err := cmd.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
